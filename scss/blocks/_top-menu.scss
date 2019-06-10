@@ -1,0 +1,126 @@
+.top-menu {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f3ebdc;
+}
+
+.top-menu__wrapper {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu__nav-list {
+    // display: none;
+    position: absolute;
+    @include reset-list;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.top-menu__nav-item {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.top-menu__nav-link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #171717;
+    text-align: center;
+    text-decoration: none;
+       &:hover,
+       &:active {
+           color: #727272;
+           text-decoration: none;
+       }
+}
+
+.top-menu__tools  {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+        & .fas {
+           cursor: pointer;
+        }
+        & .fas:hover,
+        & .fas:active
+            {
+                color: #f5f5f5;
+        }
+}
+
+.top-menu__toggle {
+    cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+    .top-menu {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    .top-menu__wrapper {
+        width: 94%;
+    }
+
+    .top-menu__tools {
+        width: 98px;
+    }
+
+    .top-menu__tools .fas {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .top-menu {
+        // max-width: 1920px;
+        margin: 0 auto;
+        padding-top: 34px;
+        padding-bottom: 24px;
+        border-bottom: 6px solid #f3ebdc;
+    }
+
+    .top-menu__wrapper {
+        // width: 1840px;
+        max-width: 1840px;
+        justify-content: flex-start;
+    }
+
+    .top-menu__logo {
+        margin-left: 68px;
+        margin-right: 220px;
+    }
+
+    .top-menu__nav .top-menu__nav-list {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .top-menu__nav-item {
+        margin-right: 70px;
+        border-bottom: none;
+            &:last-child {
+                margin-right: 0;
+            }
+    }
+
+    .top-menu__nav-link {
+        padding: 0;
+    }
+
+    .top-menu__tools {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+}

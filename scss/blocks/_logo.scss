@@ -1,0 +1,53 @@
+.logo {
+   width: 123px;
+}
+
+.logo__main,
+.logo__title {
+    display: block;
+}
+
+.logo__main {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.logo__title {
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+    .logo {
+        width: 150px;
+    }
+
+    .logo__main {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .logo__title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .logo {
+        width: 143px;
+    }
+    
+    .logo__title {
+        font-style: 12px;
+        line-height: 15px;
+    }
+}
